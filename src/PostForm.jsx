@@ -36,6 +36,8 @@ export default function PostForm({ addBulletin }) {
             type="text"
             name="title"
             id="title"
+            minlength='3'
+            required
             value={formData.title}
             onChange={handleChange}
           />
@@ -45,12 +47,14 @@ export default function PostForm({ addBulletin }) {
           <textarea
             name="comment"
             id="comment"
+            minlength='3'
+            required
             value={formData.comment}
             onChange={handleChange}
           />
         </label>
 
-        <button type="submit">Submit</button>
+        <button className="submit" type="submit">Submit</button>
       </form>
     </>
   );

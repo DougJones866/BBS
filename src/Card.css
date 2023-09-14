@@ -1,0 +1,17 @@
+.replybtn {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    color: aqua;
+    background-color: Transparent;
+    
+}
+
+.replybtn:hover {
+    color:pink;
+}
+
+.title:hover {
+    color:#f1b40b;
+}
