@@ -1,5 +1,6 @@
 form {
   display: flex;
+  width: 50%;
   flex-direction: column;
   background-color: rgba(255, 68, 0, 0.753);
   border: ridge 8px;
@@ -15,13 +16,13 @@ form {
 input {
   margin: 5px;
   border: none;
-  width: 50%;
+  width: 75%;
 }
 
 textarea {
   margin: 5px;
   resize: none;
-  width: 50%;
+  width: 75%;
   height: 100%;
   display: block;
   border: none;
