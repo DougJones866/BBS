@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 68, 0, 0.753);
+  border: ridge 8px;
+  border-color: rgb(120, 68, 242);
+  border-color: linear-gradient(
+    90deg,
+    rgba(120, 68, 242, 1) 51%,
+    rgba(206, 149, 241, 1) 100%
+  );
+  margin: 15px;
+}
+
+input {
+  margin: 5px;
+  border: none;
+  width: 50%;
+}
+
+textarea {
+  margin: 5px;
+  resize: none;
+  width: 50%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  width: 100px;
+  background-color: aqua;
+  border-top: solid 5px rgb(26, 133, 133);
+  border-left: solid 5px rgb(26, 133, 133);
+  border-right: none;
+  border-bottom: none;
+}
+
+h3 {
+  color: aquamarine;
+  margin: 5px;
+}
