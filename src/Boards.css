@@ -1,0 +1,52 @@
+.boards {
+    display: inline-flex;
+    flex-direction: column;
+    
+    
+}
+
+.board {
+  background-color: rgba(0, 7, 23, 0.753);
+  border: ridge 8px;
+  border-color: rgb(120, 68, 242);
+  border-color: linear-gradient(
+    90deg,
+    rgba(120, 68, 242, 1) 51%,
+    rgba(206, 149, 241, 1) 100%
+  );
+  margin: 15px;
+  width: 100vh;
+}
+
+.board:hover {
+  border: ridge 10px;
+  border-color: rgb(206, 68, 242);
+  border-color: linear-gradient(
+    90deg,
+    rgba(120, 68, 242, 1) 51%,
+    rgba(206, 149, 241, 1) 100%
+  );
+}
+
+.board h2 {
+  padding-left: 25px;
+  text-align: left;
+  color: #1c96e3;
+}
+
+.board h2:hover {
+    color:#f1b40b;
+}
+
+.board p {
+    color: #1c96e3;
+  padding-left: 25px;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+    .board {
+        width: 100%;
+    }
+  }
+  

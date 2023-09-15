@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Posts }  from "./Posts";
+
 import PostForm from "./PostForm";
 import Card from "./Card";
 
