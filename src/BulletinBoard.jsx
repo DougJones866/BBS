@@ -4,7 +4,7 @@ import PostForm from "./PostForm";
 import Card from "./Card";
 
 export default function Bulletins({topic}) {
-  
+  const [showPostForm, setShowPostForm] = useState(false);
   const [bulletins, setBulletins] = useState([
     {
       id: 0,
@@ -35,7 +35,8 @@ export default function Bulletins({topic}) {
           comment={bulletin.comment}
           />
           ))}
-          {/* <PostForm addBulletin={addBulletin}  /> */}
+          {showPostForm && <PostForm addBulletin={addBulletin} />}
+          <button className="showform" onClick={() => setShowPostForm(true)}>Add Post</button>
     </>
   );
 }

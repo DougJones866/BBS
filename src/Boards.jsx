@@ -21,6 +21,7 @@ const boards = [
     },
   ];
 export default function Boards() {
+    
 
   return (
     <>

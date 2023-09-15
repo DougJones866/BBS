@@ -3,7 +3,7 @@ import "./PostForm.css";
 
 export default function PostForm({ addBulletin }) {
   const [formData, setFormData] = useState({ title: "", comment: "" });
-  const [formShow, setFormShow] = useState(false)
+  
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -61,6 +61,7 @@ export default function PostForm({ addBulletin }) {
 
         <button className="submit" type="submit">Submit</button>
       </form>
+      
     </>
   );
 }
