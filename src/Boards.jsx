@@ -1,33 +1,38 @@
 import Card from "./Card";
+import Bulletins from "./BulletinBoard";
 import './Boards.css'
 
-export default function Boards() {
-  const boards = [
+const boards = [
     {
-      topic: ["General", "Gaming", "Anime"],
+      topic: 'General',
+      description: 'Talk about anything!',
+    },
+    {
+      topic: 'Gaming',
+      description: 'Gaming discussions',
+    },
+    {
+      topic: 'Anime',
+      description: 'Anime new and old',
+    },
+    {
+      topic: 'Music',
+      description: 'Talk about some tunes?',
     },
   ];
+export default function Boards() {
 
   return (
     <>
-      <div className="boards">
-        <div className="board">
-          <h2>General</h2>
-          <p>Talk about anything!</p>
+       <div className="boards">
+      {boards.map((board) => (
+        <div className="board" key={board.topic}>
+          <h2>{board.topic}</h2>
+          <p>{board.description}</p>
+          <Bulletins topic={board.topic} />
         </div>
-        <div className="board">
-          <h2>Gaming</h2>
-          <p>Gaming discussions</p>
-        </div>
-        <div className="board">
-          <h2>Anime</h2>
-          <p>Anime new and old</p>
-        </div>
-        <div className="board">
-          <h2>Music</h2>
-          <p>Talk about some tunes?</p>
-        </div>
-      </div>
+      ))}
+    </div>
     </>
   );
 }

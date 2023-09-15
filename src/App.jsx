@@ -1,9 +1,13 @@
 import Bulletins from "./BulletinBoard";
 import Boards from './Boards'
+import PostForm from "./PostForm";
+
 
 import "./styles.css";
 
 export default function App() {
+  
+
   return (
     <>
       <div className="heading">
@@ -12,6 +16,8 @@ export default function App() {
       </div>
       <Boards />
       <Bulletins />
+      <PostForm />
+      
     </>
   );
 }
