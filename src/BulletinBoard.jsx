@@ -12,13 +12,29 @@ export default function Bulletins({topic}) {
       title: "This Is a Post",
       comment: "This is a comment"
     },
+    {
+      id: 1,
+      topic: 'General',
+      title: "This Is a Post",
+      comment: "This is a comment"
+    },
+    {
+      id: 2,
+      topic: 'Gaming',
+      title: "This Is a Post",
+      comment: "This is a comment"
+    },
     
   ]);
 
   const addBulletin = (newBulletin) => {
     setBulletins([...bulletins, newBulletin]);
   };
-
+const btnstyle ={
+  backgroundColor:'transparent',
+  color: 'aqua',
+  border: 'none',
+}
 
   
 
@@ -26,9 +42,9 @@ export default function Bulletins({topic}) {
 
   return (
     <>
-      {filteredBulletins.map((bulletin) => (
+      {filteredBulletins.map((bulletin, index) => (
         <Card
-          key={bulletin.id}
+          key={index}
           topic={bulletin.topic}
           title={bulletin.title}
           subtitle={bulletin.subtitle}
@@ -36,7 +52,7 @@ export default function Bulletins({topic}) {
           />
           ))}
           {showPostForm && <PostForm addBulletin={addBulletin} />}
-          <button className="showform" onClick={() => setShowPostForm(true)}>Add Post</button>
+          <button style={btnstyle} className="showform" onClick={() => setShowPostForm(true)}>Add Post</button>
     </>
   );
 }

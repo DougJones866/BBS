@@ -15,3 +15,37 @@
 .title:hover {
     color:#f1b40b;
 }
+.bulletin {
+  /* background-color: rgba(255, 68, 0, 0.753); */
+  background-color: rgba(0, 7, 23, 0.753);
+  border: ridge 8px;
+  border-color: rgb(120, 68, 242);
+  border-color: linear-gradient(
+    90deg,
+    rgba(120, 68, 242, 1) 51%,
+    rgba(206, 149, 241, 1) 100%
+  );
+  margin: 15px;
+}
+.bulletin:hover {
+  border: ridge 10px;
+  border-color: rgb(206, 68, 242);
+  border-color: linear-gradient(
+    90deg,
+    rgba(120, 68, 242, 1) 51%,
+    rgba(206, 149, 241, 1) 100%
+  );
+}
+.bulletin h2 {
+  padding-left: 25px;
+  text-align: left;
+  color: #1c96e3;
+  line-height: 0.5em;
+}
+
+.bulletin p {
+  /* background-color: #49f5ff; */
+  color: #1c96e3;
+  padding-left: 25px;
+  text-align: left;
+}
