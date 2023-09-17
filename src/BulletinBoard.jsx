@@ -9,8 +9,8 @@ export default function Bulletins({topic}) {
     {
       id: 0,
       topic: 'General',
-      title: "This Is a Post",
-      comment: "This is a comment"
+      title: "Message board is alive!",
+      comment: "Initial board post."
     },
     {
       id: 1,
@@ -21,8 +21,8 @@ export default function Bulletins({topic}) {
     {
       id: 2,
       topic: 'Gaming',
-      title: "This Is a Post",
-      comment: "This is a comment"
+      title: "Sonic vs Mario",
+      comment: "Who's the better character?"
     },
     
   ]);

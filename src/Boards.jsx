@@ -1,6 +1,7 @@
 import Card from "./Card";
 import Bulletins from "./BulletinBoard";
 import './Boards.css'
+import { useState } from "react";
 
 const boards = [
     {
@@ -21,16 +22,20 @@ const boards = [
     },
   ];
 export default function Boards() {
-    
+  const [boardOpen, setBoardOpen] = useState(false);
+
+  function toggleBoard() {
+    setBoardOpen((boardOpen) => !boardOpen);
+  }
 
   return (
     <>
        <div className="boards">
       {boards.map((board) => (
-        <div className="board" key={board.topic}>
-          <h2>{board.topic}</h2>
+        <div className="board" key={board.topic} >
+          <h2 onClick={toggleBoard}>{board.topic}</h2>
           <p>{board.description}</p>
-          <Bulletins topic={board.topic} />
+          {boardOpen && <Bulletins topic={board.topic} />}
         </div>
       ))}
     </div>

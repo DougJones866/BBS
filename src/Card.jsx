@@ -19,6 +19,7 @@ export default function Card(props) {
     <div className="bulletin" >
         
         <h2 className="title" onClick={toggle}>{props.title}</h2>
+        {/* <p>{props.topic}</p> */}
         <p>{props.subtitle}</p>
         {commentOpen && <p>{props.comment}</p>
         }
