@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./PostForm.css";
+import "./styles/PostForm.css";
 
 const OPTIONS = [
   {
@@ -42,15 +42,18 @@ export default function PostForm({ addBulletin }) {
       id: newId,
       ...formData,
     };
+    
     addBulletin(newBulletin);
     
-    console.log(topic);
+    console.log(formData.topic);
     setFormData({
       title: "",
       subtitle: "",
       comment: "",
       topic: OPTIONS[0].value,
     });
+
+    setTopic(formData.topic);
   };
 
   function openForm() {

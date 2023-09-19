@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Card.css'
+import './styles/Card.css'
 
 
 
@@ -20,7 +20,7 @@ export default function Card(props) {
         
         <h2 className="title" onClick={toggle}>{props.title}</h2>
         {/* <p>{props.topic}</p> */}
-        <p>{props.subtitle}</p>
+        {/* <p>{props.subtitle}</p> */}
         {commentOpen && <p>{props.comment}</p>
         }
         {commentOpen && <button className='replybtn'>Reply</button>}

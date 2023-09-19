@@ -29,6 +29,11 @@ export default function Bulletins({topic}) {
 
   const addBulletin = (newBulletin) => {
     setBulletins([...bulletins, newBulletin]);
+    console.log(newBulletin)
+    console.log(bulletins);
+    
+    
+    
   };
 const btnstyle ={
   backgroundColor:'transparent',
@@ -39,15 +44,16 @@ const btnstyle ={
   
 
   const filteredBulletins = bulletins.filter((bulletin) => bulletin.topic === topic);
+  
 
   return (
     <>
-      {filteredBulletins.map((bulletin, index) => (
+      {filteredBulletins.map((bulletin, id) => (
         <Card
-          key={index}
+          key={id}
           topic={bulletin.topic}
           title={bulletin.title}
-          subtitle={bulletin.subtitle}
+          // subtitle={bulletin.subtitle}
           comment={bulletin.comment}
           />
           ))}

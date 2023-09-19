@@ -3,7 +3,7 @@ import Boards from './Boards'
 import PostForm from "./PostForm";
 
 
-import "./styles.css";
+import "./styles/styles.css";
 
 export default function App() {
   

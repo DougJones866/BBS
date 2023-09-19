@@ -1,6 +1,6 @@
 import Card from "./Card";
 import Bulletins from "./BulletinBoard";
-import './Boards.css'
+import './styles/Boards.css'
 import { useState } from "react";
 
 const boards = [
