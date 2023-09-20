@@ -25,6 +25,7 @@ export default function Bulletins({topic}) {
       comment: "Who's the better character?"
     },
     
+    
   ]);
 
   const addBulletin = (newBulletin) => {
