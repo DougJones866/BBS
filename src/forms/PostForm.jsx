@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles/PostForm.css";
+import "../styles/PostForm.css";
 
 const OPTIONS = [
   {

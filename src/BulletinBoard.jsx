@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import PostForm from "./PostForm";
+import PostForm from "./forms/PostForm";
 import Card from "./Card";
 
 export default function Bulletins({topic}) {

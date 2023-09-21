@@ -61,3 +61,14 @@ body {
   margin-left: 20px;
   color: #49f5ff;
 }
+
+.loginbtn {
+  display:inline-block;
+}
+
+.login {
+  padding: 5px auto;
+  margin: 5px;
+  border:none;
+  background-color: #49f5ff;
+}
