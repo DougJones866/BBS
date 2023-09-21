@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import PostForm from "./PostForm";
+import PostForm from "./forms/PostForm";
 import Card from "./Card";
 
 export default function Bulletins({topic}) {
@@ -25,10 +25,16 @@ export default function Bulletins({topic}) {
       comment: "Who's the better character?"
     },
     
+    
   ]);
 
   const addBulletin = (newBulletin) => {
     setBulletins([...bulletins, newBulletin]);
+    console.log(newBulletin)
+    console.log(bulletins);
+    
+    
+    
   };
 const btnstyle ={
   backgroundColor:'transparent',
@@ -39,15 +45,16 @@ const btnstyle ={
   
 
   const filteredBulletins = bulletins.filter((bulletin) => bulletin.topic === topic);
+  
 
   return (
     <>
-      {filteredBulletins.map((bulletin, index) => (
+      {filteredBulletins.map((bulletin, id) => (
         <Card
-          key={index}
+          key={id}
           topic={bulletin.topic}
           title={bulletin.title}
-          subtitle={bulletin.subtitle}
+          // subtitle={bulletin.subtitle}
           comment={bulletin.comment}
           />
           ))}

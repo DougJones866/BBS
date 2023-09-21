@@ -1,22 +1,22 @@
 import { useState } from "react";
-import "./PostForm.css";
+import "../styles/PostForm.css";
 
 const OPTIONS = [
   {
-    label: "general",
-    value: "general",
+    label: "General",
+    value: "General",
   },
   {
-    label: "anime",
-    value: "anime",
+    label: "Anime",
+    value: "Anime",
   },
   {
-    label: "gaming",
-    value: "gaming",
+    label: "Gaming",
+    value: "Gaming",
   },
   {
-    label: "music",
-    value: "music",
+    label: "Music",
+    value: "Music",
   },
 ];
 
@@ -42,15 +42,18 @@ export default function PostForm({ addBulletin }) {
       id: newId,
       ...formData,
     };
+    
     addBulletin(newBulletin);
     
-    console.log(topic);
+    console.log(formData.topic);
     setFormData({
       title: "",
       subtitle: "",
       comment: "",
       topic: OPTIONS[0].value,
     });
+
+    setTopic(formData.topic);
   };
 
   function openForm() {
