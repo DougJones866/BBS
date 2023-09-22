@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import PostForm from "./forms/PostForm";
 import Card from "./Card";
@@ -32,6 +32,21 @@ export default function Bulletins({ topic}) {
     console.log(newBulletin);
     console.log(bulletins);
   };
+
+  useEffect(() => {
+    const bulletinCounts = {};
+    bulletins.forEach((bulletin) => {
+      if (bulletin.topic in bulletinCounts) {
+        bulletinCounts[bulletin.topic]++;
+      } else {
+        bulletinCounts[bulletin.topic] = 1;
+      }
+    });
+
+    // Log the bulletin counts for each topic
+    console.log("Bulletin Counts:", bulletinCounts);
+  }, [bulletins]);
+
   const btnstyle = {
     backgroundColor: "transparent",
     color: "aqua",
@@ -41,6 +56,8 @@ export default function Bulletins({ topic}) {
   const filteredBulletins = bulletins.filter(
     (bulletin) => bulletin.topic === topic,
   );
+
+  
 
   return (
     <>
