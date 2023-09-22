@@ -72,3 +72,13 @@ body {
   border:none;
   background-color: #49f5ff;
 }
+
+a {
+  padding: 5px;
+  margin: 5px;
+  color: #49f5ff;
+}
+
+a:hover {
+  color:orangered;
+}

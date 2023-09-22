@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/Register.css'
 
 export default function RegisterForm() {
   const [formData, setFormData] = useState({
@@ -36,8 +37,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <div>
-      <h2>Register</h2>
+    <div className='registration'>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Username</label>
