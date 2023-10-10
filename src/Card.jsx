@@ -13,6 +13,7 @@ export default function Card(props) {
   function toggleBoard() {
     setBoardOpen((boardOpen) => !boardOpen);
   }
+  
 
   return (
     <>
@@ -24,6 +25,7 @@ export default function Card(props) {
         {commentOpen && <p>{props.comment}</p>
         }
         {commentOpen && <button className='replybtn'>Reply</button>}
+        {commentOpen && <button className='replybtn'>Delete</button>}
       </div>
     </>
   );

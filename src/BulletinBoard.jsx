@@ -78,6 +78,7 @@ export default function Bulletins({ topic}) {
       >
         Add Post
       </button>
+      
     </>
   );
 }
